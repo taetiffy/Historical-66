@@ -1,661 +1,550 @@
 <!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Historical Route - เส้นทางประวัติศาสตร์</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <title>Historical Route - เส้นทางประวัติศาสตร์</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap 5 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="his.css" />
-  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <body class="bg-page">
-    <nav class="navbar navbar-expand-lg navbar-dark nav-blur fixed-top">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="his.css" />
+</head>
+
+<body class="bg-page">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <!-- <span class="brand-dot me-2"></span> -->
-          <span class="fw-semibold brand-text">Historical Places</span>
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNav"
-        >
+        <a class="navbar-brand logo" href="#">Historical <span style="color: #ffffffc6">Places</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">หน้าแรก</a>
+            </li>
+            <li>
+              <a class="nav-link" href="His.html">เนื้อหาเชิงลึก</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">
+                ติดต่อเรา
+              </a>
+            </li>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-            <li class="nav-item">
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#poi">แนะนำสถานที่</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#deep-content">โบราณสถานที่</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#engagement">ภาพถ่าย</a>
-            </li>
           </ul>
-          
           <div class="navbar-search ms-lg-3">
             <div class="search-box">
-              <input
-                type="text"
-                class="search-input"
-                placeholder="Search"
-              />
+              <input type="text" class="search-input" placeholder="Search" />
               <i class="bi bi-search search-icon"></i>
             </div>
           </div>
         </div>
       </div>
     </nav>
+  </header>
+  <section id="poi" class="section-dark parallax-bg parallax-1 snap-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">ข้อมูลสถานที่สำคัญแต่ละจุด</h2>
+        <p class="section-subtitle">
+          แสดงประวัติ เรื่องราวสำคัญ ระยะเวลาโดยประมาณ และคำแนะนำการเดินทาง
+          ให้ผู้ใช้วางแผนเส้นทางได้ง่ายขึ้น
+        </p>
+      </div>
 
-    <!-- HERO -->
-    <!-- <section class="hero-section">
-      <div class="hero-overlay"></div>
-      <div class="container position-relative hero-inner">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6">
-            <div class="d-flex align-items-center mb-3 gap-2 text-muted small">
-              <i class="bi bi-compass"></i>
-              <span>เส้นทางท่องเที่ยวเชิงประวัติศาสตร์</span>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <article class="poi-card">
+            <div class="poi-image-wrapper">
+              <img
+                src="https://www.muangboranmuseum.com/wp-content/uploads/2018/12/1-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-4.jpg"
+                alt="ประตูเมืองโบราณ" class="img-fluid poi-image" />
+              <span class="poi-tag">ภาพสถานที่จริง</span>
+            </div>
+            <div class="poi-body">
+              <h5 class="poi-title">ประตูเมืองโบราณ</h5>
+              <p class="poi-text">
+                จุดเชื่อมต่อระหว่างเมืองเก่าและเมืองใหม่
+                เป็นประตูสำคัญของการค้าขายระหว่างชมพูทวีป–โลกตะวันตก
+                และเป็นสัญลักษณ์ของการเปลี่ยนผ่านทางประวัติศาสตร์
+              </p>
+              <ul class="poi-meta list-unstyled small text-muted mb-3">
+                <li>ใช้เวลาเยี่ยมชม: 1–2 ชม.</li>
+                <li>ทางเดินสะดวก เหมาะกับทุกช่วงวัย</li>
+                <li>รองรับเสียงบรรยาย 2 ภาษา</li>
+              </ul>
+              <button class="btn btn-primary w-100 rounded-pill">
+                อ่านรายละเอียด
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-4">
+          <article class="poi-card">
+            <div class="poi-image-wrapper">
+              <img src="https://mpics.mgronline.com/pics/Images/567000004915905.JPEG" alt="ลานประกาศอิสรภาพ"
+                class="img-fluid poi-image" />
+              <span class="poi-tag">จุดชมวิวพระอาทิตย์ตก</span>
+            </div>
+            <div class="poi-body">
+              <h5 class="poi-title">ลานประกาศอิสรภาพ</h5>
+              <p class="poi-text">
+                พื้นที่จัดพิธีการทางประวัติศาสตร์หลายยุคสมัย
+                เคยเป็นฉากสำคัญของการประกาศเปลี่ยนแปลงการปกครอง
+                และการรวมตัวของประชาชนในโอกาสต่าง ๆ
+              </p>
+              <ul class="poi-meta list-unstyled small text-muted mb-3">
+                <li>ใช้เวลาเยี่ยมชม: 45–60 นาที</li>
+                <li>แนะนำช่วงเย็นเพื่อชมแสงสุดท้าย</li>
+                <li>เหมาะสำหรับถ่ายภาพเล่าเรื่อง</li>
+              </ul>
+              <button class="btn btn-primary w-100 rounded-pill">
+                อ่านรายละเอียด
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-4">
+          <article class="poi-card">
+            <div class="poi-image-wrapper">
+              <img src="https://www.bangkokbigears.com/wp-content/uploads/2018/02/img_1516777113.jpg"
+                alt="พิพิธภัณฑ์เมือง" class="img-fluid poi-image" />
+              <span class="poi-tag">พิพิธภัณฑ์เมือง</span>
+            </div>
+            <div class="poi-body">
+              <h5 class="poi-title">พิพิธภัณฑ์เมือง</h5>
+              <p class="poi-text">
+                รวบรวมเอกสาร ภาพถ่าย และสิ่งของสำคัญเกี่ยวกับการพัฒนาเมือง
+                เหมาะกับทั้งนักเรียน นักวิจัย และนักท่องเที่ยวทั่วไป
+              </p>
+              <ul class="poi-meta list-unstyled small text-muted mb-3">
+                <li>เปิด 09.00–17.00 น. (หยุดวันจันทร์)</li>
+                <li>มีส่วนลดสำหรับนักเรียน–นักศึกษา</li>
+                <li>มีระบบ Audio Guide</li>
+              </ul>
+              <button class="btn btn-primary w-100 rounded-pill">
+                อ่านรายละเอียด
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="deep-content" class="section-dark-deeper snap-section parallax-bg parallax-2">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">เนื้อหาเชิงลึกทางประวัติศาสตร์</h2>
+        <p class="section-subtitle">
+          รวมไทม์ไลน์ บุคคลสำคัญ และเอกสารประกอบการเรียนรู้
+          เพื่อเสริมความเข้าใจเชิงลึกในแต่ละจุดของเส้นทาง
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="content-card h-100">
+            <h5 class="mb-3">ไทม์ไลน์เหตุการณ์สำคัญ</h5>
+            <ul class="timeline list-unstyled small">
+              <li>
+                <div class="tl-dot"></div>
+                <div class="tl-body">
+                  <span class="tl-year">พ.ศ. 2400</span>
+                  <p class="mb-0">
+                    เมืองเริ่มขยายตัวจากเขตกำแพงเมืองเดิม
+                    กลายเป็นศูนย์กลางการค้าใหม่ริมแม่น้ำสายหลัก
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="tl-dot"></div>
+                <div class="tl-body">
+                  <span class="tl-year">พ.ศ. 2445</span>
+                  <p class="mb-0">
+                    สร้างสถานีรถไฟและท่าเรือสำคัญ
+                    เปลี่ยนรูปแบบการเดินทางและเศรษฐกิจของชุมชนอย่างมาก
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="tl-dot"></div>
+                <div class="tl-body">
+                  <span class="tl-year">พ.ศ. 2475</span>
+                  <p class="mb-0">
+                    พื้นที่ลานประกาศอิสรภาพกลายเป็นฉากสำคัญของการเปลี่ยนแปลงการปกครอง
+                    และเป็นที่ระลึกของการเคลื่อนไหวภาคประชาชน
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="tl-dot"></div>
+                <div class="tl-body">
+                  <span class="tl-year">ยุคปัจจุบัน</span>
+                  <p class="mb-0">
+                    เมืองเก่าได้รับการอนุรักษ์และออกแบบเส้นทางท่องเที่ยวเชิงเรียนรู้
+                    เพื่อเชื่อมคนรุ่นใหม่กับร่องรอยของอดีต
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <button class="btn btn-outline-light btn-sm rounded-pill mt-2">
+              ดาวน์โหลดไทม์ไลน์ฉบับเต็ม
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="content-card mb-3">
+            <h5 class="mb-2">บุคคลสำคัญ</h5>
+            <p class="small text-muted">
+              บุคคลผู้มีบทบาทต่อการพัฒนาเมือง และต่อเหตุการณ์สำคัญในแต่ละยุค  
+    ทั้งในด้านสังคม การศึกษา การเดินทาง และการเก็บบันทึกเรื่องราวที่สะท้อนตัวตนของเมือง
+            </p>
+            
+          </div>
+
+          <div class="important-person mb-3 content-card">
+    <h6 class="fw-semibold">ผู้นำท้องถิ่นผู้ผลักดันการอนุรักษ์เมืองเก่า</h6>
+    <p class="small text-muted mb-1">
+      ผู้นำที่มีวิสัยทัศน์ในการอนุรักษ์มรดกทางประวัติศาสตร์  
+      พร้อมผลักดันนโยบายดูแลโบราณสถาน ถนนเก่า และย่านประวัติศาสตร์ให้คงสภาพเดิมมากที่สุด
+    </p>
+    <ul class="small">
+      <li>ริเริ่มโครงการอนุรักษ์กำแพงเมืองและคูเมืองเก่า</li>
+      <li>ส่งเสริมกิจกรรมเชิงวัฒนธรรม เช่น งานประเพณีประจำปี</li>
+      <li>พัฒนาเส้นทางท่องเที่ยวเชิงเรียนรู้ให้เป็นระบบ</li>
+      <li>สร้างสมดุลระหว่างการท่องเที่ยวและการอนุรักษ์พื้นที่ชุมชนเดิม</li>
+    </ul>
+  </div>
+
+  <div class="important-person content-card">
+    <h6 class="fw-semibold">นักเดินทาง–นักเขียนผู้บันทึกเรื่องราวของเมือง</h6>
+    <p class="small text-muted mb-1">
+      นักบันทึกเรื่องราวที่เดินทางสำรวจเมืองนับหลายทศวรรษ  
+      ถ่ายทอดภาพถ่าย บันทึกเหตุการณ์ และชีวิตผู้คน เพื่อให้คนรุ่นหลังเข้าใจรากเหง้าของเมือง
+    </p>
+    <ul class="small">
+      <li>บันทึกภาพอาคารเก่า ถนน ตลาด และวิถีชีวิตที่กำลังจะเลือนหาย</li>
+      <li>เรียบเรียงหนังสือและเอกสารอ้างอิงเกี่ยวกับเมืองในช่วงยุคสมัยต่าง ๆ</li>
+      <li>สร้างฐานข้อมูลภาพถ่ายเก่าที่ช่วยให้เกิดการฟื้นฟูย่านประวัติศาสตร์</li>
+      <li>เป็นแรงบันดาลใจให้เกิดการอนุรักษ์และพัฒนาเมืองในมุมมองที่ร่วมสมัย</li>
+    </ul>
+  </div>
+
+          <div class="content-card">
+            <h5 class="mb-3">ภาพ เอกสาร และสื่อประกอบ</h5>
+            <div class="d-flex gap-3 mb-3">
+              <div class="thumb rounded-3 overflow-hidden flex-fill">
+                <img src="https://www.lek-prapai.org/ImageUpload/Image/907_07.jpg" class="img-fluid" alt="แผนที่เก่า" />
+              </div>
+              <div class="thumb rounded-3 overflow-hidden flex-fill">
+                <img
+                  src="https://www.milo.co.th/sites/default/files/inline-images/04%20%E0%B8%9E%E0%B8%B4%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%A0%E0%B8%B1%E0%B8%93%E0%B8%91%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%84%E0%B8%A3.jpg"
+                  class="img-fluid" alt="เอกสารประวัติศาสตร์" />
+              </div>
+              <div class="thumb rounded-3 overflow-hidden flex-fill">
+                <img
+                  src="https://www.milo.co.th/sites/default/files/inline-images/03%20%E0%B8%A1%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%8B%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%A1.jpg"
+                  class="img-fluid" alt="หนังสือ" />
+              </div>
+            </div>
+            <button class="btn btn-outline-light btn-sm rounded-pill">
+              ดูคลังสื่อประกอบทั้งหมด
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="engagement" class="section-dark snap-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">รีวิว การให้คะแนน และการมีส่วนร่วม</h2>
+        <p class="section-subtitle">
+          เปิดโอกาสให้ผู้ใช้ให้คะแนน แสดงความคิดเห็น และตอบแบบสอบถามสั้น ๆ
+          เพื่อพัฒนาประสบการณ์ของเส้นทางนี้ให้ดียิ่งขึ้น
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="content-card h-100">
+            <h5 class="mb-3">รีวิวและการให้คะแนน</h5>
+
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div>
+                <span class="rating-number">4.8</span>
+              </div>
+              <div>
+                <div class="rating-stars mb-1">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <small class="text-muted">จาก 128 รีวิว</small>
+              </div>
             </div>
 
-            <h1 class="hero-title mb-3">
-              สำรวจเรื่องราว <span class="text-accent">อดีตสู่</span><br />
-              <span class="text-accent">ปัจจุบัน</span> ผ่านเส้นทางเดียว
-            </h1>
+            <div class="mb-3">
+              <label class="form-label small text-muted">ให้คะแนนเส้นทางนี้</label>
+              <div class="star-input">
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
 
-            <p class="hero-subtext mb-4">
-              รวมเส้นทางท่องเที่ยวที่ถักทอเรื่องราวสำคัญของเมืองเก่า–เมืองใหม่
-              เชื่อมต่อเหตุการณ์ บุคคลสำคัญ และภาพความทรงจำ
-              ให้คุณสัมผัสได้ทั้งในห้องเรียนและการเดินทางจริง
+            <div class="mb-3">
+              <label class="form-label small text-muted">แสดงความคิดเห็น</label>
+              <textarea class="form-control review-textarea" rows="3"
+                placeholder="เล่าประสบการณ์ เช่น จุดที่ชอบ / จุดที่อยากให้พัฒนา..."></textarea>
+            </div>
+
+            <button class="btn btn-primary rounded-pill mb-3">
+              ส่งรีวิว
+            </button>
+
+            <div class="border-top pt-3 mt-2 small">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="text-muted">รีวิวล่าสุดจากผู้ใช้งาน</span>
+                <span class="text-warning">
+                  ★★★★★
+                </span>
+              </div>
+              <p class="mb-0">
+                “เส้นทางจัดเรียงดีมาก เหมาะกับพาเด็ก ๆ มาเรียนรู้ประวัติศาสตร์
+                พร้อมเดินเที่ยวไปด้วย”
+              </p>
+              <small class="text-muted">ผู้ใช้ชื่อ “ครูสังคมศึกษา” • เมื่อ 3 วันที่แล้ว</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="content-card mb-3">
+            <h5 class="mb-2">แผงความคิดเห็น (Moderated)</h5>
+            <p class="small text-muted">
+              ข้อความที่ส่งเข้ามาจะถูกคัดกรองก่อนแสดงผล เพื่อให้บอร์ดการสนทนาเป็นพื้นที่ที่ปลอดภัยและสุภาพ
             </p>
 
-            <div class="d-flex flex-wrap gap-3 mb-4">
-              <button class="btn btn-hero-primary">
-                แนะนำเส้นทางสำหรับการเรียนรู้
-              </button>
-              <button class="btn btn-hero-secondary">
-                เส้นทางสำหรับการท่องเที่ยว 1 วัน
-              </button>
+            <div class="comment-board small mb-3">
+              <div class="comment-item">
+                <p class="mb-1">
+                  “อยากให้มีตัวอย่างที่เชื่อมกับจุดต่าง ๆ ของเส้นทางนี้ด้วยครับ”
+                </p>
+                <small class="text-muted">trxffle - 1 สัปดาห์ที่แล้ว</small>
+              </div>
             </div>
 
-            <div class="row g-3 hero-highlight-row">
-              <div class="col-md-6">
-                <div class="hero-highlight-card">
-                  <p class="small text-muted mb-1">เหมาะกับ</p>
-                  <p class="mb-0">
-                    ห้องเรียนประวัติศาสตร์ / ทัศนศึกษา / กลุ่มคนรักเมืองเก่า
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="hero-highlight-card">
-                  <p class="small text-muted mb-1">รูปแบบเนื้อหา</p>
-                  <p class="mb-0">
-                    ผสมผสานภาพเก่า–ภาพใหม่ แผนที่โต้ตอบ และเสียงบรรยายหลายภาษา
-                  </p>
-                </div>
-              </div>
-            </div>
+            <textarea class="form-control review-textarea mb-2" rows="2"
+              placeholder="พิมพ์ความคิดเห็นของคุณที่นี่..."></textarea>
+            <button class="btn btn-outline-light btn-sm rounded-pill">
+              ส่งความคิดเห็น
+            </button>
           </div>
 
-          <div class="col-lg-6">
-            <div class="video-card">
-              <div
-                class="d-flex justify-content-between align-items-center mb-3 video-card-header"
-              >
-                <div class="d-flex flex-column">
-                  <span class="small text-muted">วิดีโอเส้นทางตัวอย่าง</span>
-                  <span class="fw-semibold text-white">เมืองเก่า–เมืองใหม่</span>
-                </div>
-                <div class="btn-group btn-group-sm lang-switch" role="group">
-                  <button type="button" class="btn active">TH</button>
-                  <button type="button" class="btn">EN</button>
-                </div>
-              </div>
+          <div class="content-card mb-3">
+            <h6 class="mb-3">แบบสอบถามความพึงพอใจ</h6>
 
-              <div class="video-frame mb-3">
-                <div class="video-inner">
-                  <i class="bi bi-play-fill video-play-icon"></i>
-                  <span class="small text-muted d-block mt-3">
-                    คลิกเพื่อเล่นวิดีโอตัวอย่าง
-                  </span>
-                </div>
-              </div>
+            <div class="mb-2">
+              <label class="form-label small text-muted">
+                โดยรวมคุณประเมินเส้นทางนี้อย่างไร?
+              </label>
+              <select class="form-select form-select-sm survey-input">
+                <option>ดีมาก</option>
+                <option>ดี</option>
+                <option>พอใช้</option>
+                <option>ควรปรับปรุง</option>
+              </select>
+            </div>
 
-              <div
-                class="d-flex flex-wrap justify-content-between align-items-center small"
-              >
-                <div class="text-muted">
-                  ช่วงที่แนะนำ: เปิดคลิปก่อนเริ่มเดินทาง
-                  หรือใช้ประกอบการอธิบายในชั้นเรียน
-                </div>
-                <button class="btn btn-outline-light btn-sm rounded-pill">
-                  ดูแผนที่เส้นทาง
-                </button>
-              </div>
+            <div class="mb-2">
+              <label class="form-label small text-muted">
+                จุดที่คุณชอบมากที่สุด
+              </label>
+              <select class="form-select form-select-sm survey-input">
+                <option>ประตูเมืองโบราณ</option>
+                <option>ลานประกาศอิสรภาพ</option>
+                <option>พิพิธภัณฑ์เมือง</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label small text-muted">
+                ความยาวของเส้นทางเหมาะสมหรือไม่
+              </label>
+              <select class="form-select form-select-sm survey-input">
+                <option>เหมาะสมดี</option>
+                <option>อยากให้สั้นลง</option>
+                <option>อยากให้มีจุดเพิ่มเติม</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary btn-sm rounded-pill">
+              ส่งแบบสอบถาม
+            </button>
+          </div>
+
+          <div class="content-card">
+            <h6 class="mb-2">แชร์เส้นทางให้เพื่อนของคุณ</h6>
+            <p class="small text-muted mb-3">
+              แชร์ลิงก์เส้นทางนี้ไปยังโซเชียลมีเดียหรือแอปแชท เพื่อชวนเพื่อน ๆ
+              มาร่วมเดินทางสำรวจเมืองไปพร้อมกัน
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-light btn-sm rounded-pill">
+                <i class="bi bi-facebook me-1"></i> แชร์บน Facebook
+              </button>
+              <button class="btn btn-light btn-sm rounded-pill">
+                <i class="bi bi-line me-1"></i> ส่งผ่าน LINE
+              </button>
+              <button class="btn btn-light btn-sm rounded-pill">
+                <i class="bi bi-link-45deg me-1"></i> คัดลอกลิงก์
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
-<br />
-<br />
-    <!-- POINT OF INTEREST -->
-    <section id="poi" class="section-dark">
-      <div class="container">
-        <div class="text-center mb-4"           >
-          <!-- <p class="section-label">POINTS OF INTEREST</p> -->
-          <h2 class="section-title">ข้อมูลสถานที่สำคัญแต่ละจุด</h2>
-          <p class="section-subtitle">
-            แสดงประวัติ เรื่องราวสำคัญ ระยะเวลาโดยประมาณ และคำแนะนำการเดินทาง
-            ให้ผู้ใช้วางแผนเส้นทางได้ง่ายขึ้น
-          </p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <article class="poi-card">
-              <div class="poi-image-wrapper">
-                <img
-                  src="https://images.unsplash.com/photo-1548007083-d019aeb1ec56?q=80&w=800"
-                  alt="ประตูเมืองโบราณ"
-                  class="img-fluid poi-image"
-                />
-                <span class="poi-tag">ภาพสถานที่จริง</span>
-              </div>
-              <div class="poi-body">
-                <h5 class="poi-title">ประตูเมืองโบราณ</h5>
-                <p class="poi-text">
-                  จุดเชื่อมต่อระหว่างเมืองเก่าและเมืองใหม่
-                  เป็นประตูสำคัญของการค้าขายระหว่างชมพูทวีป–โลกตะวันตก
-                  และเป็นสัญลักษณ์ของการเปลี่ยนผ่านทางประวัติศาสตร์
-                </p>
-                <ul class="poi-meta list-unstyled small text-muted mb-3">
-                  <li>⏱ ใช้เวลาเยี่ยมชม: 1–2 ชม.</li>
-                  <li>🚶 ทางเดินสะดวก เหมาะกับทุกช่วงวัย</li>
-                  <li>🎧 รองรับเสียงบรรยาย 2 ภาษา</li>
-                </ul>
-                <button class="btn btn-primary w-100 rounded-pill">
-                  อ่านรายละเอียด
-                </button>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4">
-            <article class="poi-card">
-              <div class="poi-image-wrapper">
-                <img
-                  src="https://images.unsplash.com/photo-1476821180485-007f8f10f156?q=80&w=800"
-                  alt="ลานประกาศอิสรภาพ"
-                  class="img-fluid poi-image"
-                />
-                <span class="poi-tag">จุดชมวิวพระอาทิตย์ตก</span>
-              </div>
-              <div class="poi-body">
-                <h5 class="poi-title">ลานประกาศอิสรภาพ</h5>
-                <p class="poi-text">
-                  พื้นที่จัดพิธีการทางประวัติศาสตร์หลายยุคสมัย
-                  เคยเป็นฉากสำคัญของการประกาศเปลี่ยนแปลงการปกครอง
-                  และการรวมตัวของประชาชนในโอกาสต่าง ๆ
-                </p>
-                <ul class="poi-meta list-unstyled small text-muted mb-3">
-                  <li>⏱ ใช้เวลาเยี่ยมชม: 45–60 นาที</li>
-                  <li>🌅 แนะนำช่วงเย็นเพื่อชมแสงสุดท้าย</li>
-                  <li>📸 เหมาะสำหรับถ่ายภาพเล่าเรื่อง</li>
-                </ul>
-                <button class="btn btn-primary w-100 rounded-pill">
-                  อ่านรายละเอียด
-                </button>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4">
-            <article class="poi-card">
-              <div class="poi-image-wrapper">
-                <img
-                  src="https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=800"
-                  alt="พิพิธภัณฑ์เมือง"
-                  class="img-fluid poi-image"
-                />
-                <span class="poi-tag">นิทรรศการถาวร</span>
-              </div>
-              <div class="poi-body">
-                <h5 class="poi-title">พิพิธภัณฑ์เมือง</h5>
-                <p class="poi-text">
-                  รวบรวมเอกสาร ภาพถ่าย และสิ่งของสำคัญเกี่ยวกับการพัฒนาเมือง
-                  เหมาะกับทั้งนักเรียน นักวิจัย และนักท่องเที่ยวทั่วไป
-                </p>
-                <ul class="poi-meta list-unstyled small text-muted mb-3">
-                  <li>🕒 เปิด 09.00–17.00 น. (หยุดวันจันทร์)</li>
-                  <li>🎫 มีส่วนลดสำหรับนักเรียน–นักศึกษา</li>
-                  <li>🎧 มีระบบ Audio Guide</li>
-                </ul>
-                <button class="btn btn-primary w-100 rounded-pill">
-                  อ่านรายละเอียด
-                </button>
-              </div>
-            </article>
-          </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container mt-5">
+      <div class="footer-content">
+        <div class="footer-logo">Historical</div>
+        <div class="footer-icons">
+          <span><i class="fab fa-youtube"></i></span>
+          <span><i class="fab fa-instagram"></i></span>
+          <span><i class="fab fa-facebook-f"></i></span>
+          <span><i class="fab fa-pinterest"></i></span>
         </div>
       </div>
-    </section>
+      <div class="footer-bottom">
+        <p>&copy; 2025 LNWZA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- DEEP HISTORICAL CONTENT -->
-    <section id="deep-content" class="section-dark-deeper">
-      <div class="container">
-        <div class="text-center mb-4">
-          <!-- <p class="section-label">DEEP HISTORICAL CONTENT</p> -->
-          <h2 class="section-title">เนื้อหาเชิงลึกทางประวัติศาสตร์</h2>
-          <p class="section-subtitle">
-            รวมไทม์ไลน์ บุคคลสำคัญ และเอกสารประกอบการเรียนรู้
-            เพื่อเสริมความเข้าใจเชิงลึกในแต่ละจุดของเส้นทาง
-          </p>
+  <div class="modal fade" id="contactModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content px-4" style="border-radius: 18px;">
+
+        <div class="modal-header border-0">
+          <h5 class="modal-title fw-semibold">ติดต่อเรา (Contact)</h5>
+          <button type="button" class="btn-close text-white" data-bs-dismiss="modal"></button>
         </div>
 
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <div class="content-card h-100">
-              <h5 class="mb-3">ไทม์ไลน์เหตุการณ์สำคัญ</h5>
-              <ul class="timeline list-unstyled small">
-                <li>
-                  <div class="tl-dot"></div>
-                  <div class="tl-body">
-                    <span class="tl-year">พ.ศ. 2400</span>
-                    <p class="mb-0">
-                      เมืองเริ่มขยายตัวจากเขตกำแพงเมืองเดิม
-                      กลายเป็นศูนย์กลางการค้าใหม่ริมแม่น้ำสายหลัก
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div class="tl-dot"></div>
-                  <div class="tl-body">
-                    <span class="tl-year">พ.ศ. 2445</span>
-                    <p class="mb-0">
-                      สร้างสถานีรถไฟและท่าเรือสำคัญ
-                      เปลี่ยนรูปแบบการเดินทางและเศรษฐกิจของชุมชนอย่างมาก
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div class="tl-dot"></div>
-                  <div class="tl-body">
-                    <span class="tl-year">พ.ศ. 2475</span>
-                    <p class="mb-0">
-                      พื้นที่ลานประกาศอิสรภาพกลายเป็นฉากสำคัญของการเปลี่ยนแปลงการปกครอง
-                      และเป็นที่ระลึกของการเคลื่อนไหวภาคประชาชน
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div class="tl-dot"></div>
-                  <div class="tl-body">
-                    <span class="tl-year">ยุคปัจจุบัน</span>
-                    <p class="mb-0">
-                      เมืองเก่าได้รับการอนุรักษ์และออกแบบเส้นทางท่องเที่ยวเชิงเรียนรู้
-                      เพื่อเชื่อมคนรุ่นใหม่กับร่องรอยของอดีต
-                    </p>
-                  </div>
-                </li>
-              </ul>
-              <button class="btn btn-outline-light btn-sm rounded-pill mt-2">
-                ดาวน์โหลดไทม์ไลน์ฉบับเต็ม
-              </button>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="content-card mb-3">
-              <h5 class="mb-2">บุคคลสำคัญ</h5>
-              <p class="small text-muted">
-                เน้นบุคคลที่มีบทบาทต่อการพัฒนาเมือง
-                หรือต่อเหตุการณ์สำคัญในแต่ละยุค
+        <div class="content-card mb-3">
+          <div class="comment-board small mb-3">
+            <div class="comment-item">
+              <p class="mb-1">
+                ทางเราจะติดต่อกลับให้เร็วที่สุด
               </p>
-              <ul class="small mb-0">
-                <li>ผู้นำท้องถิ่นที่ผลักดันการอนุรักษ์เมืองเก่า</li>
-                <li>นักการศึกษาที่ออกแบบหลักสูตรใช้เมืองเป็นห้องเรียน</li>
-                <li>นักเดินทาง–นักเขียนที่บันทึกเรื่องราวเมืองไว้ในเอกสารสำคัญ</li>
-              </ul>
-            </div>
-
-            <div class="content-card">
-              <h5 class="mb-3">ภาพ เอกสาร และสื่อประกอบ</h5>
-              <div class="d-flex gap-3 mb-3">
-                <div class="thumb rounded-3 overflow-hidden flex-fill">
-                  <img
-                    src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=600"
-                    class="img-fluid"
-                    alt="แผนที่เก่า"
-                  />
-                </div>
-                <div class="thumb rounded-3 overflow-hidden flex-fill">
-                  <img
-                    src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?q=80&w=600&sat=-50"
-                    class="img-fluid"
-                    alt="เอกสารประวัติศาสตร์"
-                  />
-                </div>
-                <div class="thumb rounded-3 overflow-hidden flex-fill">
-                  <img
-                    src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=600"
-                    class="img-fluid"
-                    alt="หนังสือ"
-                  />
-                </div>
-              </div>
-              <button class="btn btn-outline-light btn-sm rounded-pill">
-                ดูคลังสื่อประกอบทั้งหมด
-              </button>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ENGAGEMENT -->
-    <section id="engagement" class="section-dark">
-      <div class="container">
-        <div class="text-center mb-4">
-          <!-- <p class="section-label">USER ENGAGEMENT</p> -->
-          <h2 class="section-title">รีวิว การให้คะแนน และการมีส่วนร่วม</h2>
-          <p class="section-subtitle">
-            เปิดโอกาสให้ผู้ใช้ให้คะแนน แสดงความคิดเห็น และตอบแบบสอบถามสั้น ๆ
-            เพื่อพัฒนาประสบการณ์ของเส้นทางนี้ให้ดียิ่งขึ้น
-          </p>
+          <label for="" class="mb-1">ชื่อ-นามสกุล</label>
+          <input class="form-control review-textarea mb-2"
+            placeholder="ชื่อ-นามสกุล"></input>
+          <label for=""class="mb-1">เบอร์ติดต่อ</label>
+            <input class="form-control review-textarea mb-2"
+            placeholder="เบอร์ติดต่อ"></input>
+          <label for=""class="mb-1">อีเมล</label>
+          <input class="form-control review-textarea mb-2"
+            placeholder="Email"></input>
+          <label for=""class="mb-1">ความคิดเห็น</label>
+          <textarea class="form-control review-textarea mb-2" rows="2"
+            placeholder="พิมพ์ความคิดเห็นของคุณที่นี่..."></textarea>
         </div>
 
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <div class="content-card h-100">
-              <h5 class="mb-3">รีวิวและการให้คะแนน</h5>
-
-              <div class="d-flex align-items-center gap-3 mb-3">
-                <div>
-                  <span class="rating-number">4.8</span>
-                </div>
-                <div>
-                  <div class="rating-stars mb-1">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                  </div>
-                  <small class="text-muted">จาก 128 รีวิว</small>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label small text-muted">ให้คะแนนเส้นทางนี้</label>
-                <div class="star-input">
-                  <i class="bi bi-star"></i>
-                  <i class="bi bi-star"></i>
-                  <i class="bi bi-star"></i>
-                  <i class="bi bi-star"></i>
-                  <i class="bi bi-star"></i>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label small text-muted">แสดงความคิดเห็น</label>
-                <textarea
-                  class="form-control review-textarea"
-                  rows="3"
-                  placeholder="เล่าประสบการณ์ เช่น จุดที่ชอบ / จุดที่อยากให้พัฒนา..."
-                ></textarea>
-              </div>
-
-              <button class="btn btn-primary rounded-pill mb-3">
-                ส่งรีวิว
-              </button>
-
-              <div class="border-top pt-3 mt-2 small">
-                <div class="d-flex justify-content-between mb-1">
-                  <span class="text-muted">รีวิวล่าสุดจากผู้ใช้งาน</span>
-                  <span class="text-warning">
-                    ★★★★★
-                  </span>
-                </div>
-                <p class="mb-0">
-                  “เส้นทางจัดเรียงดีมาก เหมาะกับพาเด็ก ๆ มาเรียนรู้ประวัติศาสตร์
-                  พร้อมเดินเที่ยวไปด้วย”
-                </p>
-                <small class="text-muted">ผู้ใช้ชื่อ “ครูสังคมศึกษา” • เมื่อ 3 วันที่แล้ว</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Comments / Survey / Share -->
-          <div class="col-lg-6">
-            <div class="content-card mb-3">
-              <h5 class="mb-2">แผงความคิดเห็น (Moderated)</h5>
-              <p class="small text-muted">
-                ข้อความที่ส่งเข้ามาจะถูกคัดกรองก่อนแสดงผล เพื่อให้บอร์ดการสนทนาเป็นพื้นที่ที่ปลอดภัยและสุภาพ
-              </p>
-
-              <div class="comment-board small mb-3">
-                <div class="comment-item">
-                  <p class="mb-1">
-                    “อยากให้มีตัวอย่างใบงานสำหรับนักเรียน ม.2
-                    ที่เชื่อมกับจุดต่าง ๆ ของเส้นทางนี้ด้วยครับ”
-                  </p>
-                  <small class="text-muted">ครูผู้สอนระดับมัธยม • 1 สัปดาห์ที่แล้ว</small>
-                </div>
-              </div>
-
-              <textarea
-                class="form-control review-textarea mb-2"
-                rows="2"
-                placeholder="พิมพ์ความคิดเห็นของคุณที่นี่..."
-              ></textarea>
-              <button class="btn btn-outline-light btn-sm rounded-pill">
-                ส่งความคิดเห็น
-              </button>
-            </div>
-
-            <div class="content-card mb-3">
-              <h6 class="mb-3">แบบสอบถามความพึงพอใจ</h6>
-
-              <div class="mb-2">
-                <label class="form-label small text-muted">
-                  โดยรวมคุณประเมินเส้นทางนี้อย่างไร?
-                </label>
-                <select class="form-select form-select-sm survey-input">
-                  <option>ดีมาก</option>
-                  <option>ดี</option>
-                  <option>พอใช้</option>
-                  <option>ควรปรับปรุง</option>
-                </select>
-              </div>
-
-              <div class="mb-2">
-                <label class="form-label small text-muted">
-                  จุดที่คุณชอบมากที่สุด
-                </label>
-                <select class="form-select form-select-sm survey-input">
-                  <option>ประตูเมืองโบราณ</option>
-                  <option>ลานประกาศอิสรภาพ</option>
-                  <option>พิพิธภัณฑ์เมือง</option>
-                </select>
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label small text-muted">
-                  ความยาวของเส้นทางเหมาะสมหรือไม่
-                </label>
-                <select class="form-select form-select-sm survey-input">
-                  <option>เหมาะสมดี</option>
-                  <option>อยากให้สั้นลง</option>
-                  <option>อยากให้มีจุดเพิ่มเติม</option>
-                </select>
-              </div>
-
-              <button class="btn btn-primary btn-sm rounded-pill">
-                ส่งแบบสอบถาม
-              </button>
-            </div>
-
-            <div class="content-card">
-              <h6 class="mb-2">แชร์เส้นทางให้เพื่อนของคุณ</h6>
-              <p class="small text-muted mb-3">
-                แชร์ลิงก์เส้นทางนี้ไปยังโซเชียลมีเดียหรือแอปแชท เพื่อชวนเพื่อน ๆ
-                มาร่วมเดินทางสำรวจเมืองไปพร้อมกัน
-              </p>
-              <div class="d-flex flex-wrap gap-2">
-                <button class="btn btn-light btn-sm rounded-pill">
-                  <i class="bi bi-facebook me-1"></i> แชร์บน Facebook
-                </button>
-                <button class="btn btn-light btn-sm rounded-pill">
-                  <i class="bi bi-line me-1"></i> ส่งผ่าน LINE
-                </button>
-                <button class="btn btn-light btn-sm rounded-pill">
-                  <i class="bi bi-link-45deg me-1"></i> คัดลอกลิงก์
-                </button>
-              </div>
-            </div>
-          </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">
+            ปิดหน้าต่าง
+          </button>
+          <button type="button" class="btn btn-primary rounded-pill px-4" style="background-color: #4380C8; border:none;">
+            ส่งข้อความ
+          </button>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- FOOTER -->
-    <footer id="contact" class="footer-bar">
-      <div class="container text-center small text-muted py-3">
-        เส้นทางท่องเที่ยวเชิงประวัติศาสตร์ • ตัวอย่างการออกแบบ UI ด้วย Bootstrap
-      </div>
-    </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="main.js?v=13"></script>
-    <!-- Custom JS -->
-    <script>
-      // Wait for DOM to be fully loaded
-      document.addEventListener('DOMContentLoaded', function() {
-        // Get navbar height for offset calculation
-        const navbar = document.querySelector('.navbar');
-        const navbarHeight = navbar ? navbar.offsetHeight : 80;
-        const offset = navbarHeight + 20; // Add extra spacing
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js?v=13"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
 
-        // Update active nav link on scroll
-        const sections = document.querySelectorAll('section[id], footer[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        function updateActiveNav() {
-          let current = '';
-          const scrollY = window.pageYOffset || window.scrollY;
-
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop - offset;
-            const sectionHeight = section.offsetHeight;
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-              current = section.getAttribute('id');
-            }
-          });
-
-          navLinks.forEach((link) => {
-            link.classList.remove('active');
-            const href = link.getAttribute('href');
-            if (href && href !== '#' && href === `#${current}`) {
-              link.classList.add('active');
-            }
-          });
-        }
-
-        // Update on scroll
-        window.addEventListener('scroll', updateActiveNav, { passive: true });
-
-        // Update on page load
-        updateActiveNav();
-
-        // Smooth scroll for nav links
-        navLinks.forEach((link) => {
-          link.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href && href.startsWith('#')) {
-              e.preventDefault();
-              const targetId = href.substring(1);
-              
-              if (targetId === '') {
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              } else {
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                  const targetPosition = targetElement.offsetTop - offset;
-                  window.scrollTo({ 
-                    top: targetPosition, 
-                    behavior: 'smooth' 
-                  });
-                  
-                  // Update active state after scroll
-                  setTimeout(() => {
-                    updateActiveNav();
-                  }, 100);
-                } else {
-                  console.warn('Section not found:', targetId);
-                }
-              }
-            }
-          });
-        });
-
-        // Also handle hash changes (when page loads with hash)
-        if (window.location.hash) {
-          const hash = window.location.hash.substring(1);
-          const targetElement = document.getElementById(hash);
-          if (targetElement) {
-            setTimeout(() => {
-              const targetPosition = targetElement.offsetTop - offset;
-              window.scrollTo({ 
-                top: targetPosition, 
-                behavior: 'smooth' 
-              });
-              updateActiveNav();
-            }, 100);
-          }
+    gsap.utils.toArray(".parallax-bg").forEach((section) => {
+      gsap.to(section, {
+        backgroundPositionY: "40%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5
         }
       });
-    </script>
-  </body>
+    });
+
+    gsap.utils.toArray(".poi-card, .content-card").forEach((card) => {
+      gsap.from(card, {
+        y: 80,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          scrub: 1
+        }
+      });
+    });
+  </script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".snap-section").forEach((sec) => {
+      ScrollTrigger.create({
+        trigger: sec,
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+        snap: {
+          snapTo: 1,
+          duration: 0.4,
+          ease: "power2.out"
+        }
+      });
+    });
+  </script>
+
+
+
+</body>
+
 </html>

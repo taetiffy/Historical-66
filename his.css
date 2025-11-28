@@ -9,7 +9,6 @@
   --darker-bg: #0b111e;
 }
 
-/* ===== BASE STYLES ===== */
 .bg-page {
   background-color: var(--darker-bg);
   color: #fff;
@@ -23,11 +22,9 @@ body {
   background-attachment: fixed;
   margin: 0;
   padding: 0;
-  /* background: #f0f4f8; */
   color: #fff;
 }
 
-/* ===== NAVBAR ===== */
 .nav-blur {
   background-color: rgba(8, 19, 47, 0.6) !important;
   backdrop-filter: blur(15px) !important;
@@ -59,7 +56,7 @@ body {
 }
 
 .navbar-nav {
-  gap: 0.5rem;
+  gap: 20px;
 }
 
 .nav-link {
@@ -73,7 +70,7 @@ body {
 
 .nav-link:hover {
   color: #fff !important;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.05)!important;
 }
 
 .nav-link.active {
@@ -83,7 +80,6 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== SEARCH BOX ===== */
 .navbar-search {
   margin-left: 1rem;
 }
@@ -125,7 +121,6 @@ body {
   pointer-events: none;
 }
 
-/* ===== RESPONSIVE NAVBAR ===== */
 @media (max-width: 991.98px) {
   .navbar-search {
     margin-left: 0;
@@ -146,7 +141,6 @@ body {
   }
 }
 
-/* ===== HERO SECTION ===== */
 .hero-section {
   min-height: 100vh;
   position: relative;
@@ -249,7 +243,6 @@ body {
   height: 100%;
 }
 
-/* ===== VIDEO CARD ===== */
 .video-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -307,9 +300,8 @@ body {
   transform: scale(1.1);
 }
 
-/* ===== SECTIONS ===== */
 section[id] {
-  scroll-margin-top: 100px; /* Offset for fixed navbar */
+  scroll-margin-top: 100px;
 }
 
 .section-dark {
@@ -325,7 +317,7 @@ section[id] {
 }
 
 footer[id] {
-  scroll-margin-top: 100px; /* Offset for fixed navbar */
+  scroll-margin-top: 100px;
 }
 
 .section-label {
@@ -351,7 +343,6 @@ footer[id] {
   margin: 0 auto;
 }
 
-/* ===== POI CARDS ===== */
 .poi-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -430,7 +421,6 @@ footer[id] {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* ===== CONTENT CARDS ===== */
 .content-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -451,7 +441,6 @@ footer[id] {
   font-weight: 600;
 }
 
-/* ===== TIMELINE ===== */
 .timeline {
   position: relative;
   padding-left: 2rem;
@@ -504,7 +493,6 @@ footer[id] {
   margin: 0;
 }
 
-/* ===== THUMBNAILS ===== */
 .thumb {
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -520,7 +508,6 @@ footer[id] {
   object-fit: cover;
 }
 
-/* ===== RATING & REVIEWS ===== */
 .rating-number {
   font-size: 3rem;
   font-weight: 700;
@@ -567,7 +554,6 @@ footer[id] {
   box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25) !important;
 }
 
-/* ===== COMMENTS ===== */
 .comment-board {
   max-height: 200px;
   overflow-y: auto;
@@ -586,7 +572,6 @@ footer[id] {
   margin: 0;
 }
 
-/* ===== SURVEY ===== */
 .survey-input {
   background: rgba(0, 0, 0, 0.3) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -605,7 +590,6 @@ footer[id] {
   color: #fff;
 }
 
-/* ===== FOOTER ===== */
 .footer-bar {
   background-color: var(--darker-bg);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -613,7 +597,6 @@ footer[id] {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* ===== FORM CONTROLS ===== */
 .section-dark .form-control,
 .section-dark-deeper .form-control {
   background: rgba(0, 0, 0, 0.3) !important;
@@ -655,7 +638,6 @@ footer[id] {
   color: #fff;
 }
 
-/* ===== BUTTONS ===== */
 .section-dark .btn-primary,
 .section-dark-deeper .btn-primary {
   background-color: var(--primary-color);
@@ -702,7 +684,6 @@ footer[id] {
   color: #fff;
 }
 
-/* ===== TEXT UTILITIES ===== */
 .section-dark .text-muted,
 .section-dark-deeper .text-muted {
   color: rgba(255, 255, 255, 0.6) !important;
@@ -723,7 +704,6 @@ footer[id] {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -783,10 +763,6 @@ section {
   will-change: transform;
 }
 
-main > section {
-  scroll-snap-align: start;
-}
-
 body {
   background-color: var(--darker-bg);
   font-family: 'Kanit', sans-serif !important;
@@ -815,7 +791,6 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  /* padding: 20px 50px; */
   padding-top: 20px;
   padding-bottom: 20px;
   box-sizing: border-box;
@@ -844,10 +819,13 @@ header.scrolled {
 .nav-link {
   font-weight: 500;
   transition: color 0.3s ease;
+  border-radius: 100px;
+    padding-right: 20px !important;
+  padding-left: 20px !important;
 }
 
 .nav-link:hover {
-  color: #a0c4ff !important;
+  color: #fff !important;
 }
 
 .search {
@@ -1888,7 +1866,6 @@ footer {
   padding-left: 20px !important;
 }
 
-/* map lower z-index */
 .map,
 .map img,
 .map-pin,
@@ -1896,13 +1873,11 @@ footer {
   z-index: 5;
 }
 
-/* card wrapper highest */
 #placeCardsWrapper {
   position: relative;
   z-index: 99 !important;
 }
 
-/* card style */
 .place-card {
   background: #ffffff12;
   backdrop-filter: blur(8px);
@@ -2370,4 +2345,74 @@ body {
        top: 15px;
        right: auto;
     }
+}
+
+.parallax-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.parallax-1 {
+  background-image: url("https://thumbs.dreamstime.com/b/ancient-vintage-blue-map-background-retro-style-science-education-travel-vintage-background-history-geography-team-ancient-110847896.jpg");
+}
+
+.parallax-2 {
+  background-image: url("https://thumbs.dreamstime.com/b/ancient-vintage-blue-map-background-retro-style-science-education-travel-vintage-background-history-geography-team-ancient-110847896.jpg");
+}
+
+.parallax-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(9 17 37 / 89%);
+  z-index: 1;
+}
+
+.parallax-bg .container {
+  position: relative;
+  z-index: 5;
+}
+html, body {
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center; 
+  padding-top: 120px; 
+  padding-bottom: 120px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 20px 50px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: #0000001a;
+    backdrop-filter: blur(13px) !important;
+    transition: background-color 0.4s 
+ease, backdrop-filter 0.4s 
+ease;
+}
+
+.modal-content {
+  background: rgba(35, 35, 45, 0.95);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.form-control,
+.form-control:focus {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
 }
